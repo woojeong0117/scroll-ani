@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "GoryeongStrawberry";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/GoryeongStrawberry.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "GoryeongStrawberry", sans-serif;
+  font-size: 3rem;
+}
+
+#container {
+  overflow-x: hidden;
+}
+.sticky-elem {
+  display: none;
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+
+.scroll-section {
+  padding-top: 50vh;
+  position: relative;
+}
+
+.sticky-elem-canvas {
+  top: 0;
+  height: 100%;
+}
+#show-scene-0 .section1 .sticky-elem,
+#show-scene-1 .section2 .sticky-elem,
+#show-scene-2 .section3 .sticky-elem,
+#show-scene-3 .section4 .sticky-elem,
+#show-scene-4 .section5 .sticky-elem {
+  display: block;
+  will-change: transform, opacity;
+}
+
+.section5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-effect-end .sticky-elem {
+  /* 스크롤 효과가 모두 끝나고, 아래 일반 콘텐츠 영역에서는 sticky-elem들을 모두 안보이도록 */
+  display: none !important;
+}
+.sticky-elem-canvas canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.section1 p {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.2em;
+  position: relative;
+  top: -10vh;
+  z-index: 9;
+  font-weight: normal;
+}
+
+.normal-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
+  padding: 35vh 0;
+  position: relative;
+}
+
+.main-message {
+  opacity: 0;
+  top: 37vh;
+  color: #fff;
+}
+
+.main-message p {
+  text-align: center;
+}
+
+.image-blend-canvas.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.section5 p {
+  text-align: center;
+  padding-bottom: 10vh;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  background: slateblue;
+  color: #fff;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  z-index: 100;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.before-load .loading {
+  opacity: 1;
+}
+
+body.before-load {
+  overflow: hidden;
+}
+
+@keyframes loading-spin {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes loading-circle-ani {
+  0% {
+    stroke-dashoffset: 157;
+  }
+  75% {
+    stroke-dashoffset: -147;
+  }
+  100% {
+    stroke-dashoffset: -157;
+  }
+}
+
+.loading-circle {
+  width: 54px;
+  height: 54px;
+  animation: loading-spin 3s infinite;
+}
+
+.loading-circle circle {
+  fill: #fff;
+  stroke: darkorange;
+  stroke-width: 4;
+  stroke-dasharray: 157;
+  stroke-dashoffset: 0;
+  animation: loading-circle-ani 1s infinite;
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 5rem;
+  }
+}

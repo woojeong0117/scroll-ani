@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body class="before-load">
+    <div class="loading">
+        <svg class="loading-circle">
+            <circle cx="50%" cy="50%" r="25"></circle>
+        </svg>
+    </div>
+    <div id="container">
+        <section class="scroll-section section1">
+            <p>안녕하세요<br>아래로 scroll 해보시게</p>
+            <div class="sticky-elem sticky-elem-canvas">
+                <canvas id="video-canvas-0" width="1920" height="1080"></canvas>
+            </div>
+            <div class="sticky-elem main-message a">
+                <p>스크롤하면<br>영상이 움직이는</p>
+            </div>
+            <div class="sticky-elem main-message b">
+                <p>기능을<br>구현해보았습니다</p>
+            </div>
+            <div class="sticky-elem main-message c">
+                <p>새로운 우주의 세계로<br>여러분을 초대합니다.</p>
+            </div>
+            <div class="sticky-elem main-message d">
+                <p>이제 끝이납니다<br>감사합니다</p>
+            </div>
+        </section>
+        <section class="normal-section section2">
+            그럼 이제는 다른 영상이<br>나와요
+        </section>
+        <section class="normal-section section3">
+            어떤 영상일지<br>
+            궁금하지요?
+        </section>
+        <section class="scroll-section section4">
+            <div class="sticky-elem sticky-elem-canvas">
+                <canvas id="video-canvas-1" width="1920" height="1080"></canvas>
+            </div>
+            <div class="sticky-elem main-message a">
+                <p>아까는 정신없었으니<br>이번에는 바다를</p>
+            </div>
+            <div class="sticky-elem main-message b">
+                <p>준비해<br>보았습니다</p>
+            </div>
+            <div class="sticky-elem main-message c">
+                <p>당장이라도<br>뛰어들고싶어요.</p>
+            </div>
+            <div class="sticky-elem main-message d">
+                <p>😎😎</p>
+            </div>
+        </section>
+        <section class="scroll-section section5">
+            <div>
+                <p>이제는 image blend Time</p>
+            </div>
+            <canvas class="image-blend-canvas" width="1920" height="1080"></canvas>
+            <p>드디어 대장정 끝!!!!!<br />넘나 어려운것 😫😫</p>
+        </section>
+
+        <footer>
+            푸터임
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
